@@ -1,0 +1,44 @@
+# -*- coding: utf-8 -*-
+"""
+Created on Mon Nov  6 18:57:58 2023
+
+@author: user
+"""
+
+class Student:
+    "這是__doc__資訊"
+    def __init__(self, name, student_id, age, gender):
+        self.name = name
+        self.student_id = student_id
+        self.age = age
+        self.gender = gender
+        
+    def set_grade(self, grade):
+        self.grade = grade
+        
+    def get_grade(self):
+        
+        return "成績:"+str(self.grade)
+    
+    def all_info(self):
+        
+        return "學生姓名:"+self.name+"\n學號:"+str(self.student_id)+"\n年齡:"+str(self.age)+"\n性別:"+self.gender+"\n成績:"+str(self.grade) 
+    
+    
+    
+a = Student("YUYU", "01501324", 37, "Femail")
+
+a.set_grade(99)
+
+print(isinstance(a, Student))
+print(a.get_grade())
+print(a.all_info())
+
+print(a.__doc__)
+print(a.__class__)
+print(a.__dict__)
+
+"Reference"
+"https://www.learncodewithmike.com/2020/01/python-class.html"
+"https://weilihmen.medium.com/%E9%97%9C%E6%96%BCpython%E7%9A%84%E9%A1%9E%E5%88%A5-class-%E5%9F%BA%E6%9C%AC%E7%AF%87-5468812c58f2"
+"https://www.maxlist.xyz/2019/12/12/python-oop/"
